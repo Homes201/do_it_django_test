@@ -6,13 +6,15 @@ files:
 file_exists_behavior: OVERWRITE
 
 permissions:
-    - object: /home/ubuntu/do_it_django_test
+    - object: /home/ubuntu/do_it_djangWo_test
       pattern: '**'
       owner: root
       group: root
 
 hooks:
   AfterInstall:
-    - location: scripts/after-deploy.sh
+    - location: scripts/assign_permission.sh
+      timeout: 2000
+    - location : scripts/after-deploy.sh
       timeout: 10000
       runas: root
