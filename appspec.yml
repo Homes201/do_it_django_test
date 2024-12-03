@@ -12,7 +12,7 @@ permissions:
       group: root
 
 hooks:
-    AfterInstall:
-      - location: scripts/after-deploy.sh
-          timeout: 60000
-          runas: root
+  AfterInstall:
+    - location: scripts/after-deploy.sh
+      timeout: 10000
+      runas: root
